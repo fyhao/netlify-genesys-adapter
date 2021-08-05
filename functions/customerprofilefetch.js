@@ -22,6 +22,9 @@ exports.handler = async function (event, context) {
     console.log(error);
     return {
       statusCode: 500,
+	  headers : {
+		  'Content-Type':'application/json'
+	  },
       body: JSON.stringify({ error: 'Failed fetching data' }),
     };
   }
