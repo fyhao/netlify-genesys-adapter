@@ -1,4 +1,4 @@
 # a path:
 /*
   # headers for that path:
-  Content-Type: application/json
+  content-type: "application/json"
