@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import analytics from './utils/analytics'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CovidStats from './components/CovidStats';
 export default class App extends Component {
   state = {
     
