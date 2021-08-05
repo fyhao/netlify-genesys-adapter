@@ -17,7 +17,9 @@ exports.handler = async function (event, context) {
 	else {
 		data.status = 100;
 	}
-	return { statusCode: 200, body: JSON.stringify(data) };
+	return { statusCode: 200, headers : {
+		  'Content-Type':'application/json'
+	  },body: JSON.stringify(data) };
   } catch (error) {
     console.log(error);
     return {
