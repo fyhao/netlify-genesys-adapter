@@ -19,3 +19,6 @@ exports.handler = async function (event, context) {
     };
   }
 };
+
+//https://mystifying-hodgkin-8fdfaa.netlify.app/.netlify/functions/auth
+//https://mystifying-hodgkin-8fdfaa.netlify.app/.netlify/functions/loyalty

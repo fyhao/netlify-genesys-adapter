@@ -7,7 +7,7 @@ exports.handler = async function (event, context) {
 	console.log(event);
     
     var data = {loyalty:'10'};
-	var auth = req.headers.authorization;
+	var auth = event.headers.authorization;
 	var token = auth.substring('Bearer '.length);
 	if(token.indexOf('a6') == -1) {
 		return { statusCode: 401, headers : {
