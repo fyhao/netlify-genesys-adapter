@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 
 exports.handler = async function (event, context) {
+  console.log('request to loyalty : ' + new Date().toString());
 	
   try {
 	console.log(event);
