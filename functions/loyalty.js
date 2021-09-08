@@ -5,8 +5,15 @@ exports.handler = async function (event, context) {
 	
   try {
 	console.log(event);
+    
     var data = {loyalty:'10'};
-	
+	var auth = req.headers.authorization;
+	var token = auth.substring('Bearer '.length);
+	if(token.indexOf('a6') == -1) {
+		return { statusCode: 401, headers : {
+		  'Content-Type':'application/json'
+	  },body: JSON.stringify({ error: 'Failed to authenticate' }) };
+	}
 	return { statusCode: 200, headers : {
 		  'Content-Type':'application/json'
 	  },body: JSON.stringify(data) };
