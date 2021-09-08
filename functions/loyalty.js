@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
     var data = {loyalty:'10'};
 	var auth = event.headers.authorization;
 	var token = auth.substring('Bearer '.length);
-	if(token.indexOf('a6') == -1) {
+	if(token.indexOf('a7') == -1) {
 		return { statusCode: 401, headers : {
 		  'Content-Type':'application/json'
 	  },body: JSON.stringify({ error: 'Failed to authenticate' }) };
